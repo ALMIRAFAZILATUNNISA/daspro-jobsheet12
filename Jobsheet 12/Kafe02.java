@@ -1,5 +1,7 @@
 package Jobsheet12;
 
+
+
 public class Kafe02 {
     public static void Menu(String namaPelanggan, boolean isMember) {
         System.out.println("Selamat Datang, " + namaPelanggan + "!");
@@ -20,7 +22,7 @@ public class Kafe02 {
     } 
 
     public static void main(String[] args) {
-        Menu("Andi",true);
+        Menu(true, "Andi");
 
     }
 }
