@@ -20,6 +20,8 @@ public class Kafe02 {
 
     public static void main(String[] args) {
         Menu();
+        Menu();
+        Menu();
 
         System.out.println("Jumlah Menu : " + jumlahMenu());
     }
