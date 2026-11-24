@@ -27,19 +27,33 @@ public class Kafe02 {
             return hargaTotal;
         }
 
-        
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
         Menu("Andi", true);
 
-        System.out.print("Masukkan nomor menu yang ingin Anda pesan: ");
+        int totalBayar = 0;
+
+        while (true){
+        System.out.print("Masukkan nomor menu (1-6, 0 untuk selesai): ");
         int pilihanMenu = sc.nextInt();
+
+        if (pilihanMenu == 0) {
+            break;
+        }
+        
+        if (pilihanMenu < 1 || pilihanMenu > 6) {
+            System.out.println("Menu tidak tersedia");
+            continue;
+        }
+
         System.out.print("Masukkan jumlah item yang ingin dipesan: ");
         int banyakItem = sc.nextInt();
         
-        int totalBayar = hitungTotalHarga02(pilihanMenu, banyakItem);
-        System.out.println("Total harga untuk pesanan Anda: Rp" + totalBayar);
-
+        totalBayar += hitungTotalHarga02(pilihanMenu, banyakItem);
+    }
+        System.out.println("Total keseluruhan pesanan Anda: Rp" + totalBayar);
+    
     }
 }
