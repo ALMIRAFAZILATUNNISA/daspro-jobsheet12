@@ -13,7 +13,14 @@ public class Kafe02 {
         System.out.println("Silakan pilih menu yang Anda inginkan.");
     }
 
+    //Pertanyaan 1
+    public static int jumlahMenu(){
+        return 6;
+    } 
+
     public static void main(String[] args) {
         Menu();
+
+        System.out.println("Jumlah Menu : " + jumlahMenu());
     }
 }
