@@ -14,31 +14,33 @@ static int hitungLuas(int pjg, int lb) {
     }
 
     static int hitungLuasPermukaanBalok(int p, int l, int t) {
-        return 2 * (hitungLuas(p, 1) + hitungLuas(p, t) + hitungLuas(l, t));
+        return 2 * (hitungLuas(p, l) + hitungLuas(p, t) + hitungLuas(l, t));
     }
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
-        int p, l, t, L, vol;
+        for (int i = 1; i <= 3; i++) {
+            System.out.println("=== Balok ke-" + i + "===");
+            
+        
 
         System.out.println("Masukkan panjang");
-        p = input.nextInt();
+        int p = input.nextInt();
 
         System.out.println("Masukkan lebar");
-        l = input.nextInt();
+        int l = input.nextInt();
 
         System.out.println("Masukkan tinggi");
-        t = input.nextInt();
+        int t = input.nextInt();
 
-        L = hitungLuas(p, l);
+        int L = hitungLuas(p, l);
         System.out.println("Luas Persegi Panjang adalah " + L);
 
-        vol = hitungVolume(t, p, l);
+        int vol = hitungVolume(t, p, l);
         System.out.println("Volume Balok adalah " + vol);
         System.out.println("Luas Permukaan Balok adalah " + hitungLuasPermukaanBalok(p, l, t));
 
-
+        }
         input.close();
     }
 }
